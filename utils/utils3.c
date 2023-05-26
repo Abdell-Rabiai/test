@@ -6,7 +6,7 @@
 /*   By: arabiai <arabiai@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 16:15:49 by ahaloui           #+#    #+#             */
-/*   Updated: 2023/05/26 22:12:22 by arabiai          ###   ########.fr       */
+/*   Updated: 2023/05/26 22:29:09 by arabiai          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,10 @@ void execute_commands_with_pipe(t_list *cmd, t_info *info)
 				}
 				
 				if (is_builin(commands) == 1)
+				{
 					builtin_execution(cmd, info, 0);
+					exit(EXIT_SUCCESS);
+				}
 				else
 					execve(check_if_command_found(commands->main_cmd, &info->head_ex), (commands->cmds), NULL);
 			}
