@@ -13,9 +13,6 @@
         <field name="model">x_estate.property</field>
         <field name="arch" type="xml">
             <list string="Properties">
-
-
-
                 <!-- Add background color for properties with gardens -->
                 <field name="x_name" string="Property Name" decoration-bf="x_garden == True" decoration-danger="x_garden == False"/>
                 
@@ -50,7 +47,6 @@
 
                 <field name="x_partner_id"/>
                 <field name="x_user_id"/>
-
             </list>
         </field>
     </record>
@@ -111,9 +107,6 @@
         </field>
     </record>
 
-
-
-    <!-- Menu Items -->
-    <menuitem id="menu_estate_root" name="Real Estate XML" sequence="10"/>
+    <!-- Menu Item -->
     <menuitem id="menu_estate_property" name="Properties" parent="menu_estate_root" action="action_estate_property" sequence="10"/>
 </odoo>
