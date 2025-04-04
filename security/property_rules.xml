@@ -1,0 +1,13 @@
+<odoo>
+    <!-- Allow Public Users to Read Published Properties -->
+    <record id="estate_rule_public_read" model="ir.rule">
+        <field name="name">Allow Public to Read Published Properties</field>
+        <field name="model_id" ref="estate_xml.model_real_estate_property" />
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('x_api_published', '=', True)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+</odoo>

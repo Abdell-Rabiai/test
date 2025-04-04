@@ -1,0 +1,21 @@
+<odoo>
+    <record id="estate_property_type_residential" model="x_estate.property.type">
+        <field name="x_name">Residential</field>
+    </record>
+
+    <record id="estate_property_type_commercial" model="x_estate.property.type">
+        <field name="x_name">Commercial</field>
+    </record>
+
+    <record id="estate_property_type_industrial" model="x_estate.property.type">
+        <field name="x_name">Industrial</field>
+    </record>
+
+    <record id="estate_property_type_land" model="x_estate.property.type">
+        <field name="x_name">Land</field>
+    </record>
+
+    <record id="estate_property_type_land" model="x_estate.property.type">
+        <field name="x_name">Tets</field>
+    </record>
+</odoo>

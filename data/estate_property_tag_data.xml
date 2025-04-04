@@ -1,0 +1,42 @@
+<odoo>
+    <record id="estate_property_tag_renovated" model="x_estate.property.tag">
+        <field name="x_name">Renovated</field>
+    </record>
+
+    <record id="estate_property_tag_cozy" model="x_estate.property.tag">
+        <field name="x_name">Cozy</field>
+    </record>
+
+    <record id="estate_property_tag_modern" model="x_estate.property.tag">
+        <field name="x_name">Modern</field>
+    </record>
+
+    <record id="estate_property_tag_luxury" model="x_estate.property.tag">
+        <field name="x_name">Luxury</field>
+    </record>
+
+    <record id="estate_property_tag_spacious" model="x_estate.property.tag">
+        <field name="x_name">Spacious</field>
+    </record>
+
+    <record id="estate_property_tag_garden" model="x_estate.property.tag">
+        <field name="x_name">Garden</field>
+    </record>
+
+    <record id="estate_property_tag_pet_friendly" model="x_estate.property.tag">
+        <field name="x_name">Pet Friendly</field>
+    </record>
+
+    <record id="estate_property_tag_new_build" model="x_estate.property.tag">
+        <field name="x_name">New Build</field>
+    </record>
+
+    <record id="estate_property_tag_sea_view" model="x_estate.property.tag">
+        <field name="x_name">Sea View</field>
+    </record>
+
+    <record id="estate_property_tag_well_maintained" model="x_estate.property.tag">
+        <field name="x_name">Well Maintained</field>
+    </record>
+
+</odoo>

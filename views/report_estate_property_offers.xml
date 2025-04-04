@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <!-- Sub-template for property offers -->
+  <template id="report_offers_table">
+    <t t-if="doc.offer_ids">
+      <h3>Offers</h3>
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th>Buyer</th>
+            <th>Price</th>
+            <th>Status</th>
+            <th>Validity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <t t-foreach="doc.offer_ids" t-as="offer">
+            <tr>
+              <td><t t-esc="offer.partner_id.name"/></td>
+              <td><t t-esc="offer.price"/></td>
+              <td><t t-esc="offer.status"/></td>
+              <td><t t-esc="offer.validity"/> days</td>
+            </tr>
+          </t>
+        </tbody>
+      </table>
+    </t>
+    <t t-else="">
+      <p><em>No offers have been made for this property yet.</em></p>
+    </t>
+  </template>
+
+  <!-- Original property report using sub-template -->
+  <template id="report_estate_property_offers">
+    <t t-call="web.external_layout">
+      <t t-foreach="docs" t-as="doc">
+        <main class="page">
+          <h2>Property Offers Report</h2>
+          <p><strong>Property:</strong> <t t-esc="doc.name"/></p>
+          <p><strong>Postcode:</strong> <t t-esc="doc.postcode"/></p>
+          <p><strong>Description:</strong> <t t-esc="doc.description"/></p>
+          <p><strong>Expected Price:</strong> <t t-esc="doc.expected_price"/></p>
+          <p><strong>Selling Price:</strong> <t t-esc="doc.selling_price"/></p>
+          <p><strong>Salesperson:</strong> <t t-esc="doc.salesperson_id.name"/></p>
+
+          <t t-call="estate.report_offers_table"/>
+        </main>
+      </t>
+    </t>
+  </template>
+
+  <!-- New report for res.users -->
+  <template id="report_estate_user_properties">
+    <t t-call="web.external_layout">
+      <t t-foreach="docs" t-as="doc">
+        <main class="page">
+          <h2>Properties for <t t-esc="doc.name"/></h2>
+          <t t-foreach="doc.property_ids" t-as="property">
+            <div class="mt-2 mb-2">
+              <h3><t t-esc="property.name"/></h3>
+              <p><strong>Postcode:</strong> <t t-esc="property.postcode"/></p>
+              <p><strong>Expected Price:</strong> <t t-esc="property.expected_price"/></p>
+              <p><strong>Selling Price:</strong> <t t-esc="property.selling_price"/></p>
+              <t t-set="doc" t-value="property"/>
+              <t t-call="estate.report_offers_table"/>
+            </div>
+          </t>
+        </main>
+      </t>
+    </t>
+  </template>
+
+</odoo>

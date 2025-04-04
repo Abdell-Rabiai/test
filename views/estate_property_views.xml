@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action -->
+    <record id="action_estate_property" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">x_estate.property</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
+    <record id="view_estate_property_tree" model="ir.ui.view">
+        <field name="name">x_estate.property.tree</field>
+        <field name="model">x_estate.property</field>
+        <field name="arch" type="xml">
+            <list string="Properties">
+
+
+
+                <!-- Add background color for properties with gardens -->
+                <field name="x_name" string="Property Name" decoration-bf="x_garden == True" decoration-danger="x_garden == False"/>
+                
+                <!-- Availability Date - color the past dates -->
+                <field name="x_date_availability" string="Availability Date" />
+
+                <!-- Price - make high prices stand out -->
+                <field name="x_expected_price" string="Price" widget="monetary" options="{'currency_field': 'currency_id'}" decoration-success="x_expected_price &gt; 1000000" decoration-info="x_expected_price &lt; 100000"/>
+                
+                <!-- Add a color for the number of Bedrooms -->
+                <field name="x_bedrooms" string="Bedrooms" decoration-warning="x_bedrooms &lt; 3"/>
+                
+                <!-- Living Area - highlight big properties -->
+                <field name="x_living_area" string="Living Area (m²)" decoration-success="x_living_area &gt; 200"/>
+                
+                <!-- Facades - emphasize large number of facades -->
+                <field name="x_facades" string="Facades" decoration-info="x_facades &gt; 3"/>
+                
+                <!-- Garage: show green if available -->
+                <field name="x_garage" string="Garage" widget="boolean" decoration-success="x_garage == True"/>
+                
+                <!-- Garden: change color based on presence -->
+                <field name="x_garden" string="Garden" widget="boolean" decoration-success="x_garden == True"/>
+                
+                <!-- Garden Area - emphasize large gardens -->
+                <field name="x_garden_area" string="Garden Area (m²)" decoration-info="x_garden_area &gt; 500"/>
+                
+                <!-- Garden Orientation - different color for different orientations -->
+                <field name="x_garden_orientation" string="Garden Orientation" decoration-info="x_garden_orientation == 'south'"/>
+
+                <field name="x_property_tag_ids" widget="many2many_tags"/>
+
+                <field name="x_partner_id"/>
+                <field name="x_user_id"/>
+
+            </list>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_estate_property_form" model="ir.ui.view">
+        <field name="name">x_estate.property.form</field>
+        <field name="model">x_estate.property</field>
+        <field name="arch" type="xml">
+            <form string="🏡 Property Details" decoration-primary="x_garden == True" decoration-danger="x_expected_price &lt; 100000">
+                <sheet>
+                    <!-- Property Basic Information -->
+                    <group>
+                        <group>
+                            <field name="x_name" string="🏠 Property Name" style="color: #2c3e50; font-weight: bold;"/>
+                            <field name="x_expected_price" widget="monetary" options="{'currency_field': 'currency_id'}" 
+                                string="💰 Price" style="color: #27ae60; font-weight: bold;"/>
+                            <field name="x_date_availability" string="📅 Availability Date" style="color: #8e44ad;"/>
+                        </group>
+                    </group>
+
+                    <separator string="🏡 Property Features" style="background-color: #ecf0f1; font-size: 16px; font-weight: bold;"/>
+
+                    <group>
+                        <group>
+                            <field name="x_bedrooms" string="🛏️ Bedrooms" decoration-warning="x_bedrooms &lt; 3"/>
+                            <field name="x_living_area" string="📏 Living Area (m²)" decoration-success="x_living_area &gt; 200"/>
+                            <field name="x_facades" string="🏛️ Facades" decoration-info="x_facades &gt; 3"/>
+                        </group>
+                    </group>
+
+                    <separator string="🏡 Additional Features" style="background-color: #ecf0f1; font-size: 16px; font-weight: bold;"/>
+
+                    <group>
+                        <group>
+                            <field name="x_garage" string="🚗 Garage" widget="boolean" decoration-success="x_garage == True"/>
+                            <field name="x_garden" string="🌿 Garden" widget="boolean" decoration-success="x_garden == True"/>
+                            <field name="x_garden_area" string="🌳 Garden Area (m²)" decoration-info="x_garden_area &gt; 500"/>
+                            <field name="x_garden_orientation" string="🧭 Garden Orientation" decoration-info="x_garden_orientation == 'south'"/>
+                            <field name="x_total_area" readonly="1"/>
+
+                            <field name="x_property_type_id"/>
+                            <field name="x_partner_id"/>
+                            <field name="x_user_id"/>
+                        </group>
+                    </group>
+                    <separator string="🏡 Additional Features" style="background-color: #ecf0f1; font-size: 16px; font-weight: bold;"/>
+                    <group>
+                        <field string='Tags' name="x_property_tag_ids" widget="many2many_tags"/>
+                    </group>
+
+                    <group>
+                        <!-- Adding the One2many Field 'x_offer_ids' -->
+                        <field string="Offers" name="x_offer_ids" widget="one2many_list" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <!-- Menu Items -->
+    <menuitem id="menu_estate_root" name="Real Estate XML" sequence="10"/>
+    <menuitem id="menu_estate_property" name="Properties" parent="menu_estate_root" action="action_estate_property" sequence="10"/>
+</odoo>

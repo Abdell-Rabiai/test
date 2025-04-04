@@ -1,0 +1,212 @@
+<odoo>
+
+    <record id="estate_property_big_villa" model="x_estate.property">
+        <field name="x_name">Big Villa</field>
+        <field name="x_date_availability">2020-02-02</field>
+        <field name="x_expected_price">1600000</field>
+        <field name="x_bedrooms">6</field>
+        <field name="x_living_area">100</field>
+        <field name="x_facades">4</field>
+        <field name="x_garage">True</field>
+        <field name="x_garden">True</field>
+        <field name="x_garden_area">100000</field>
+        <field name="x_garden_orientation">south</field>
+    </record>
+
+    <record id="estate_property_luxury_apartment" model="x_estate.property">
+        <field name="x_name">Luxury Apartment</field>
+        <field name="x_date_availability">2023-08-01</field>
+        <field name="x_expected_price">1200000</field>
+        <field name="x_bedrooms">3</field>
+        <field name="x_living_area">150</field>
+        <field name="x_facades">2</field>
+        <field name="x_garage">True</field>
+        <field name="x_garden">False</field>
+        <field name="x_garden_area">0</field>
+        <field name="x_garden_orientation">north</field>
+    </record>
+
+    <record id="estate_property_seaside_cottage" model="x_estate.property">
+        <field name="x_name">Seaside Cottage</field>
+        <field name="x_date_availability">2022-06-15</field>
+        <field name="x_expected_price">750000</field>
+        <field name="x_bedrooms">2</field>
+        <field name="x_living_area">80</field>
+        <field name="x_facades">1</field>
+        <field name="x_garage">False</field>
+        <field name="x_garden">True</field>
+        <field name="x_garden_area">300</field>
+        <field name="x_garden_orientation">east</field>
+    </record>
+
+    <record id="estate_property_modern_apartment" model="x_estate.property">
+        <field name="x_name">Modern Apartment</field>
+        <field name="x_date_availability">2024-01-10</field>
+        <field name="x_expected_price">950000</field>
+        <field name="x_bedrooms">4</field>
+        <field name="x_living_area">130</field>
+        <field name="x_facades">3</field>
+        <field name="x_garage">True</field>
+        <field name="x_garden">True</field>
+        <field name="x_garden_area">200</field>
+        <field name="x_garden_orientation">east</field>
+    </record>
+
+    <record id="estate_property_penthouse" model="x_estate.property">
+        <field name="x_name">Penthouse</field>
+        <field name="x_date_availability">2023-09-05</field>
+        <field name="x_expected_price">2000000</field>
+        <field name="x_bedrooms">5</field>
+        <field name="x_living_area">250</field>
+        <field name="x_facades">4</field>
+        <field name="x_garage">True</field>
+        <field name="x_garden">False</field>
+        <field name="x_garden_area">0</field>
+        <field name="x_garden_orientation">east</field>
+    </record>
+
+    <record id="estate_property_rural_house" model="x_estate.property">
+        <field name="x_name">Rural House</field>
+        <field name="x_date_availability">2024-05-20</field>
+        <field name="x_expected_price">450000</field>
+        <field name="x_bedrooms">3</field>
+        <field name="x_living_area">120</field>
+        <field name="x_facades">2</field>
+        <field name="x_garage">False</field>
+        <field name="x_garden">True</field>
+        <field name="x_garden_area">5000</field>
+        <field name="x_garden_orientation">south</field>
+    </record>
+
+    <record id="estate_property_urban_loft" model="x_estate.property">
+        <field name="x_name">Urban Loft</field>
+        <field name="x_date_availability">2024-03-18</field>
+        <field name="x_expected_price">850000</field>
+        <field name="x_bedrooms">2</field>
+        <field name="x_living_area">110</field>
+        <field name="x_facades">2</field>
+        <field name="x_garage">True</field>
+        <field name="x_garden">False</field>
+        <field name="x_garden_area">0</field>
+        <field name="x_garden_orientation">south</field>
+    </record>
+
+    <record id="estate_property_lakefront_cabin" model="x_estate.property">
+        <field name="x_name">Lakefront Cabin</field>
+        <field name="x_date_availability">2023-12-01</field>
+        <field name="x_expected_price">950000</field>
+        <field name="x_bedrooms">4</field>
+        <field name="x_living_area">140</field>
+        <field name="x_facades">3</field>
+        <field name="x_garage">True</field>
+        <field name="x_garden">True</field>
+        <field name="x_garden_area">2000</field>
+        <field name="x_garden_orientation">north</field>
+    </record>
+
+    <record id="estate_property_countryside_estate" model="x_estate.property">
+        <field name="x_name">Countryside Estate</field>
+        <field name="x_date_availability">2024-07-15</field>
+        <field name="x_expected_price">3000000</field>
+        <field name="x_bedrooms">8</field>
+        <field name="x_living_area">350</field>
+        <field name="x_facades">5</field>
+        <field name="x_garage">True</field>
+        <field name="x_garden">True</field>
+        <field name="x_garden_area">10000</field>
+        <field name="x_garden_orientation">east</field>
+    </record>
+
+    <record id="estate_property_city_apartment" model="x_estate.property">
+        <field name="x_name">City Apartment</field>
+        <field name="x_date_availability">2023-11-10</field>
+        <field name="x_expected_price">550000</field>
+        <field name="x_bedrooms">2</field>
+        <field name="x_living_area">75</field>
+        <field name="x_facades">1</field>
+        <field name="x_garage">False</field>
+        <field name="x_garden">False</field>
+        <field name="x_garden_area">0</field>
+        <field name="x_garden_orientation">east</field>
+    </record>
+
+    <record id="estate_property_farmhouse" model="x_estate.property">
+        <field name="x_name">Farmhouse</field>
+        <field name="x_date_availability">2024-04-25</field>
+        <field name="x_expected_price">650000</field>
+        <field name="x_bedrooms">5</field>
+        <field name="x_living_area">200</field>
+        <field name="x_facades">3</field>
+        <field name="x_garage">True</field>
+        <field name="x_garden">True</field>
+        <field name="x_garden_area">4000</field>
+        <field name="x_garden_orientation">south</field>
+    </record>
+
+    <record id="estate_property_luxury_villa" model="x_estate.property">
+        <field name="x_name">Luxury Villa</field>
+        <field name="x_date_availability">2024-06-15</field>
+        <field name="x_expected_price">2500000</field>
+        <field name="x_bedrooms">6</field>
+        <field name="x_living_area">450</field>
+        <field name="x_facades">4</field>
+        <field name="x_garage">True</field>
+        <field name="x_garden">True</field>
+        <field name="x_garden_area">1500</field>
+        <field name="x_garden_orientation">east</field>
+    </record>
+
+    <record id="estate_property_modern_loft" model="x_estate.property">
+        <field name="x_name">Modern Loft</field>
+        <field name="x_date_availability">2024-01-10</field>
+        <field name="x_expected_price">750000</field>
+        <field name="x_bedrooms">1</field>
+        <field name="x_living_area">90</field>
+        <field name="x_facades">2</field>
+        <field name="x_garage">False</field>
+        <field name="x_garden">False</field>
+        <field name="x_garden_area">0</field>
+        <field name="x_garden_orientation">north</field>
+    </record>
+
+    <record id="estate_property_beachfront_bungalow" model="x_estate.property">
+        <field name="x_name">Beachfront Bungalow</field>
+        <field name="x_date_availability">2025-03-20</field>
+        <field name="x_expected_price">1200000</field>
+        <field name="x_bedrooms">3</field>
+        <field name="x_living_area">180</field>
+        <field name="x_facades">3</field>
+        <field name="x_garage">True</field>
+        <field name="x_garden">True</field>
+        <field name="x_garden_area">600</field>
+        <field name="x_garden_orientation">east</field>
+    </record>
+
+    <record id="estate_property_mountain_cabin" model="x_estate.property">
+        <field name="x_name">Mountain Cabin</field>
+        <field name="x_date_availability">2024-12-05</field>
+        <field name="x_expected_price">450000</field>
+        <field name="x_bedrooms">2</field>
+        <field name="x_living_area">120</field>
+        <field name="x_facades">2</field>
+        <field name="x_garage">False</field>
+        <field name="x_garden">True</field>
+        <field name="x_garden_area">800</field>
+        <field name="x_garden_orientation">north</field>
+    </record>
+
+    <record id="estate_property_urban_penthouse" model="x_estate.property">
+        <field name="x_name">Urban Penthouse</field>
+        <field name="x_date_availability">2023-09-30</field>
+        <field name="x_expected_price">1800000</field>
+        <field name="x_bedrooms">4</field>
+        <field name="x_living_area">220</field>
+        <field name="x_facades">1</field>
+        <field name="x_garage">True</field>
+        <field name="x_garden">False</field>
+        <field name="x_garden_area">0</field>
+        <field name="x_garden_orientation">east</field>
+    </record>
+
+
+</odoo>

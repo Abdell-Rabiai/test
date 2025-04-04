@@ -1,0 +1,58 @@
+<odoo>
+    <record id="estate_property_type_residential" model="x_estate.property.type">
+        <field name="x_name">Residential</field>
+    </record>
+
+    <record id="estate_property_type_commercial" model="x_estate.property.type">
+        <field name="x_name">Commercial</field>
+    </record>
+
+    <record id="estate_property_type_industrial" model="x_estate.property.type">
+        <field name="x_name">Industrial</field>
+    </record>
+
+    <record id="estate_property_type_land" model="x_estate.property.type">
+        <field name="x_name">Land</field>
+    </record>
+
+    <record id="estate_property_type_villa" model="x_estate.property.type">
+        <field name="x_name">Villa</field>
+    </record>
+
+    <record id="estate_property_type_penthouse" model="x_estate.property.type">
+        <field name="x_name">Penthouse</field>
+    </record>
+
+    <record id="estate_property_type_apartment" model="x_estate.property.type">
+        <field name="x_name">Apartment</field>
+    </record>
+
+    <record id="estate_property_type_townhouse" model="x_estate.property.type">
+        <field name="x_name">Townhouse</field>
+    </record>
+
+    <record id="estate_property_type_duplex" model="x_estate.property.type">
+        <field name="x_name">Duplex</field>
+    </record>
+
+    <record id="estate_property_type_studio" model="x_estate.property.type">
+        <field name="x_name">Studio</field>
+    </record>
+
+    <record id="estate_property_type_farm" model="x_estate.property.type">
+        <field name="x_name">Farm</field>
+    </record>
+
+    <record id="estate_property_type_warehouse" model="x_estate.property.type">
+        <field name="x_name">Warehouse</field>
+    </record>
+
+    <record id="estate_property_type_office" model="x_estate.property.type">
+        <field name="x_name">Office</field>
+    </record>
+
+    <record id="estate_property_type_retail" model="x_estate.property.type">
+        <field name="x_name">Retail</field>
+    </record>
+
+</odoo>
